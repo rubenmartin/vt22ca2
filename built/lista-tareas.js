@@ -25,22 +25,26 @@ System.register(['@angular/core', '@angular/platform-browser-dynamic'], function
             TaskService = (function () {
                 function TaskService() {
                     this.taskStore = [];
-                    var tasks = [
+                    this.taskStore = [
                         {
                             name: "Preparar guión Videotutorial",
-                            deadline: "03 Nov 2016",
+                            deadline: new Date("03 Nov 2016"),
+                            queued: false,
                             tareasRequeridas: 2
                         }, {
                             name: "Buscar imágenes y videos",
-                            deadline: "03 Nov 2016",
+                            deadline: new Date("03 Nov 2016"),
+                            queued: false,
                             tareasRequeridas: 1
                         }, {
                             name: "Grabación Completa",
-                            deadline: "04 Nov 2016",
+                            deadline: new Date("04 Nov 2016"),
+                            queued: false,
                             tareasRequeridas: 2
                         }, {
                             name: "Edición y Producción",
-                            deadline: "05 Nov 2016",
+                            deadline: new Date("05 Nov 2016"),
+                            queued: false,
                             tareasRequeridas: 3
                         }
                     ];
